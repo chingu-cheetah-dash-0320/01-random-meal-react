@@ -9,7 +9,6 @@ aside,
 footer {
   margin: 0;
   padding: rem-calc(20);
-  border: 1px solid #000000;
 }
 
 .content {
@@ -22,14 +21,12 @@ footer {
 
 .sidebar {
   flex: 0 1 600px;
-  border: 1px solid #000000;
   display: flex;
-  align-items: center;
+  align-items:top;
   justify-content: center;
 }
 
-.footer {
-  border: 1px solid #000000;
+.videoSection {
   flex-basis: 100%;
   display: flex;
   align-items: center;
