@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <div>
         <Navbar color="success" light>
-          <NavbarBrand href="/" className="mr-auto"><span style={{color:'white'}}>DinnerBook</span></NavbarBrand>
+          <NavbarBrand href="/" className="mr-auto"><span style={{color:'white'}}>DineRoulette</span></NavbarBrand>
           
         </Navbar>
       </div>
