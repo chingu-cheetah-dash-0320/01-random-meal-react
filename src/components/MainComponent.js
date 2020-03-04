@@ -14,8 +14,6 @@ function Main (){
   const [data, setData] = useState(false);
 
   async function handleClick () {
-    alert("Great Shot!");
-    
       const result = await axios('https://www.themealdb.com/api/json/v1/1/random.php',);
       setData(result.data.meals[0]);
       console.log(result.data.meals[0]);
