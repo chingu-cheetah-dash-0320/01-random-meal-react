@@ -109,7 +109,7 @@ export function RecipieDetails(props) {
         <div className="flex-container wrapper">
           <section className="videoSection" style={{ margin: "25px" }}>
             <iframe
-              src={"http://www.youtube.com/embed/"+vidId}
+              src={"https://www.youtube.com/embed/"+vidId}
               width="900"
               height="450"
               frameborder="0"
