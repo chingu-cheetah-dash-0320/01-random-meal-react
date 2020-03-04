@@ -8,14 +8,26 @@ import {
   CardSubtitle,
   Badge,
   ListGroup, 
-  ListGroupItem 
+  ListGroupItem,
+  Spinner 
 } from "reactstrap";
 
 export function RecipieDetails(props) {
   console.log(props.recipe);
   let tags = [];
   let vidId = "";
-  if(props.recipe){
+  if(props.isLoading){
+    return (
+      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <Spinner type="grow" color="secondary" />
+        <Spinner type="grow" color="success" />
+        <Spinner type="grow" color="warning" />
+        <Spinner type="grow" color="info" />
+        <Spinner type="grow" color="light" />
+      </div>
+    );
+  }
+  else if(props.recipe){
     if(props.recipe.strTags){
       tags = props.recipe.strTags.split(",");
     }
@@ -39,7 +51,7 @@ export function RecipieDetails(props) {
               />
               <CardBody>
                 <CardTitle></CardTitle>
-                <CardSubtitle>{props.recipe.strMeal}</CardSubtitle>
+                <CardSubtitle><b>{props.recipe.strMeal}</b></CardSubtitle>
                 <p>{props.recipe.strArea} {props.recipe.strCategory} Dish</p>
   
                 {tags.map((tag) => <Badge href="#" color="warning">{tag}</Badge>)}
